@@ -7,7 +7,7 @@ from oauth2client import client
 from oauth2client import tools
 from oauth2client.file import Storage
 from apiclient import errors
-#Push auth.py, main.py, send_mail.py, and quickstart 
+
 try:
     import argparse
     flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
