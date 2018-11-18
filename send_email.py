@@ -13,7 +13,9 @@ from email.mime.audio import MIMEAudio
 from email.mime.image import MIMEImage
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
+from googleapiclient.errors import HttpError
 import mimetypes
+
 try:
     import argparse
     flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
@@ -23,6 +25,7 @@ except ImportError:
 class send_email:
     def __init__(self,service):
         self.service = service
+
     def create_message(self,sender, to, subject, message_text):
       message = MIMEText(message_text)
       message['to'] = to
@@ -83,5 +86,5 @@ class send_email:
                    .execute())
         print('Message Id: %s' % message['id'])
         return message
-      except errors.HttpError as error:
+      except HttpError as error:
         print('An error occurred: %s' % error)
