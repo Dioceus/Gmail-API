@@ -2,7 +2,7 @@
 
 Created to send mass amounts of emails automatically for business-related inquiries of SET (Students in Engineering and Technology). 
 
-Uses Google Gmail API. Made via following its documentation: https://developers.google.com/gmail/api/quickstart/python
+Uses Google Gmail API. 
 
 Info about Students in Engineering and Technology: http://setottawa.com/
 
